@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Patients History</title>
+	<style>
+		table {
+			border-collapse: collapse;
+			margin-top: 20px;
+			width: 100%;
+		}
+		th, td {
+			border: 1px solid black;
+			padding: 5px;
+			text-align: left;
+		}
+		th {
+			background-color: #a6d1f5;
+		}
+	</style>
+</head>
+<body>
+	<h1>Patients Record</h1>
+	<table id="patient-table">
+		<thead>
+			<tr>
+				<th>Name</th>
+				<th>Age</th>
+				<th>Gender</th>
+				<th>ID</th>
+				<th>Disease</th>
+				<th>Date</th>
+				<th>Doctor Name</th>
+				<th>Patient Number</th>
+			</tr>
+		</thead>
+		<tbody>
+			<!-- Patient data will be added here dynamically -->
+		</tbody>
+	</table>
+	<script>
+		const patientTable = document.getElementById('patient-table');
+
+		const patientList = [
+			{
+				name: 'John Doe',
+				age: 35,
+				gender: 'Male',
+				id: 12345,
+				disease: 'Flu',
+				date: '2022-03-15',
+				doctorName: 'Dr. Jane Smith',
+				patientNumber: 'P001'
+			},
+			{
+				name: 'Jane Smith',
+				age: 45,
+				gender: 'Female',
+				id: 23456,
+				disease: 'COVID-19',
+				date: '2022-03-16',
+				doctorName: 'Dr. John Doe',
+				patientNumber: 'P002'
+			},
+			{
+				name: 'Bob Johnson',
+				age: 50,
+				gender: 'Male',
+				id: 34567,
+				disease: 'Heart Disease',
+				date: '2022-03-17',
+				doctorName: 'Dr. Sarah Lee',
+				patientNumber: 'P003'
+			}
+		];
+
+		patientList.forEach(function(patient) {
+			const row = document.createElement('tr');
+			const nameCell = document.createElement('td');
+			const ageCell = document.createElement('td');
+			const genderCell = document.createElement('td');
+			const idCell = document.createElement('td');
+			const diseaseCell = document.createElement('td');
+			const dateCell = document.createElement('td');
+			const doctorNameCell = document.createElement('td');
+			const patientNumberCell = document.createElement('td');
+			nameCell.textContent = patient.name;
+			ageCell.textContent = patient.age;
+			genderCell.textContent = patient.gender;
+			idCell.textContent = patient.id;
+			diseaseCell.textContent = patient.disease;
+			dateCell.textContent = patient.date;
+			doctorNameCell.textContent = patient.doctorName;
+			patientNumberCell.textContent = patient.patientNumber;
+			row.appendChild(nameCell);
+			row.appendChild(ageCell);
+			row.appendChild(genderCell);
+			row.appendChild(idCell);
+			row.appendChild(diseaseCell);
+			row.appendChild(dateCell);
+			row.appendChild(doctorNameCell);
+			row.appendChild(patientNumberCell);
+			patientTable.appendChild(row);
+		});
+	</script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Patient Records</title>
+  <link rel="stylesheet" type="text/css" href="main1.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Patient Records</h1>
+    <form id="login-form">
+      <h2>Login</h2>
+      <div>
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username">
+      </div>
+      <div>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password">
+      </div>
+      <button type="submit">Login</button>
+    </form>
+    <div id="patient-records" class="hidden">
+      <h2>Patient Records</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>DOB</th>
+            <th>Medical Record Number</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>John Smith</td>
+            <td>01/01/1970</td>
+            <td>123456</td>
+          </tr>
+          <tr>
+            <td>Jane Doe</td>
+            <td>01/01/1980</td>
+            <td>789012</td>
+          </tr>
+        </tbody>
+      </table>
+      <button id="logout-button">Logout</button>
+    </div>
+  </div>
+  <script src="script1.js"></script>
+</body>
+</html>

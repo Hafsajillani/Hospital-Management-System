@@ -1,0 +1,52 @@
+body {
+	font-family: Arial, sans-serif;
+	background-color: #f1f1f1;
+  }
+  
+  h1 {
+	text-align: center;
+	margin-top: 20px;
+  }
+  
+  label {
+	display: block;
+	margin-top: 20px;
+  }
+  
+  select {
+	display: block;
+	margin-top: 5px;
+	padding: 5px;
+	width: 100%;
+	border-radius: 5px;
+	border: 1px solid #ccc;
+	box-sizing: border-box;
+  }
+  
+  #patient-details {
+	display: none;
+	margin-top: 20px;
+	padding: 20px;
+	background-color: #fff;
+	border-radius: 5px;
+	box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  }
+  
+  #patient-controls {
+	display: none;
+	margin-top: 20px;
+	text-align: right;
+  }
+  
+  #save-button {
+	padding: 10px 20px;
+	background-color: #0077cc;
+	color: #fff;
+	border-radius: 5px;
+	border: none;
+	cursor: pointer;
+  }
+  
+  #save-button:hover {
+	background-color: #005ea7;
+  }
